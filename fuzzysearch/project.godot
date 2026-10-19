@@ -1,0 +1,13 @@
+config_version=5
+
+[application]
+config/name="FuzzySearch Item Search"
+run/main_scene="res://item_search.tscn"
+config/features=PackedStringArray("4.8")
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
