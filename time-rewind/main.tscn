@@ -7,10 +7,10 @@
 [ext_resource type="Shader" path="res://desaturate.gdshader" id="5"]
 
 [sub_resource type="RectangleShape2D" id="floor_l"]
-size = Vector2(420, 40)
+size = Vector2(420, 20000)
 
 [sub_resource type="RectangleShape2D" id="floor_r"]
-size = Vector2(592, 40)
+size = Vector2(592, 20000)
 
 [sub_resource type="RectangleShape2D" id="player"]
 size = Vector2(32, 56)
@@ -56,6 +56,7 @@ color = Color(0.07, 0.04, 0.12, 1)
 position = Vector2(210, 480)
 
 [node name="Shape" type="CollisionShape2D" parent="FloorLeft"]
+position = Vector2(0, 9980)
 shape = SubResource("floor_l")
 
 [node name="Look" type="ColorRect" parent="FloorLeft"]
@@ -69,6 +70,7 @@ color = Color(0.62, 0.3, 1, 1)
 position = Vector2(856, 480)
 
 [node name="Shape" type="CollisionShape2D" parent="FloorRight"]
+position = Vector2(0, 9980)
 shape = SubResource("floor_r")
 
 [node name="Look" type="ColorRect" parent="FloorRight"]
