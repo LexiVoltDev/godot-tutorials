@@ -7,6 +7,7 @@ its source and license.
 
 | Tutorial | Asset | Source | License |
 | --- | --- | --- | --- |
+| [time-rewind](time-rewind/) | None. Everything on screen is built from plain Godot nodes, gradients and a small shader. | - | - |
 | [hit-stop](hit-stop/) | None. Everything on screen is built from plain Godot nodes. | - | - |
 
 Godot Engine is made by the Godot Engine contributors and is MIT licensed:

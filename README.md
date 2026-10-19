@@ -11,6 +11,7 @@ One folder per tutorial. Each folder is a complete Godot project you can open an
 
 | Tutorial | Folder | What you'll learn |
 | --- | --- | --- |
+| Time Rewind | [time-rewind/](time-rewind/) | Braid-style rewind: a ring buffer of snapshots that runs the player, physics and animations backward |
 | Hit-Stop | [hit-stop/](hit-stop/) | A reusable HitStop autoload: damage-scaled freeze, flash, camera shake and an audio dip |
 
 More are on the way.
