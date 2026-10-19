@@ -22,6 +22,7 @@ extends Node
 var camera: Camera2D
 var flash: ColorRect
 var _token := 0
+var _pause_token := 0
 var _ducked := false
 var _saved_db := 0.0
 var _flash_tween: Tween
@@ -55,9 +56,12 @@ func hit(damage: float, parry := false) -> void:
 
 # 2. The other way: pause the tree. Only PROCESS_MODE_ALWAYS nodes keep running.
 func freeze_with_pause(sec: float) -> void:
+	_pause_token += 1
+	var my_pause := _pause_token
 	get_tree().paused = true
 	await get_tree().create_timer(sec, true).timeout
-	get_tree().paused = false
+	if my_pause == _pause_token:
+		get_tree().paused = false
 
 
 # 5. Flash during the freeze, on a tween that ignores time_scale.
