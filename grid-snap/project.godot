@@ -1,0 +1,10 @@
+config_version=5
+
+[application]
+
+config/name="Grid Snap"
+run/main_scene="res://main.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/grid_snap/plugin.cfg")
