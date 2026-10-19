@@ -1,0 +1,259 @@
+[gd_scene load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://player.gd" id="1"]
+[ext_resource type="Script" path="res://fx.gd" id="3"]
+[ext_resource type="Script" path="res://buffer_readout.gd" id="4"]
+[ext_resource type="Texture2D" path="res://assets/kenney/bg_sky.png" id="5"]
+[ext_resource type="Texture2D" path="res://assets/kenney/bg_trees.png" id="6"]
+[ext_resource type="Texture2D" path="res://assets/kenney/bg_ground.png" id="7"]
+[ext_resource type="Texture2D" path="res://assets/kenney/tile_0002.png" id="8"]
+[ext_resource type="Texture2D" path="res://assets/kenney/tile_0004.png" id="9"]
+[ext_resource type="Texture2D" path="res://assets/kenney/tile_0041.png" id="10"]
+[ext_resource type="Texture2D" path="res://assets/kenney/tile_0042.png" id="11"]
+[ext_resource type="Texture2D" path="res://assets/kenney/tile_0043.png" id="12"]
+[ext_resource type="Texture2D" path="res://assets/kenney/char_pink.png" id="13"]
+
+[sub_resource type="RectangleShape2D" id="floor_shape"]
+size = Vector2(1200, 36)
+
+[sub_resource type="RectangleShape2D" id="platform_shape"]
+size = Vector2(54, 18)
+
+[sub_resource type="RectangleShape2D" id="player_shape"]
+size = Vector2(16, 20)
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+z_index = -10
+
+[node name="Sky" type="TextureRect" parent="Background"]
+texture_repeat = 2
+offset_left = -600.0
+offset_top = -480.0
+offset_right = 600.0
+offset_bottom = -48.0
+texture = ExtResource("5")
+stretch_mode = 1
+
+[node name="Trees" type="TextureRect" parent="Background"]
+texture_repeat = 2
+offset_left = -600.0
+offset_top = -48.0
+offset_right = 600.0
+offset_bottom = -24.0
+texture = ExtResource("6")
+stretch_mode = 1
+
+[node name="Ground" type="TextureRect" parent="Background"]
+texture_repeat = 2
+offset_left = -600.0
+offset_top = -24.0
+offset_right = 600.0
+texture = ExtResource("7")
+stretch_mode = 1
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0, 18)
+shape = SubResource("floor_shape")
+
+[node name="Grass" type="TextureRect" parent="Floor"]
+texture_repeat = 2
+offset_left = -600.0
+offset_right = 600.0
+offset_bottom = 18.0
+texture = ExtResource("8")
+stretch_mode = 1
+
+[node name="Dirt" type="TextureRect" parent="Floor"]
+texture_repeat = 2
+offset_left = -600.0
+offset_top = 18.0
+offset_right = 600.0
+offset_bottom = 400.0
+texture = ExtResource("9")
+stretch_mode = 1
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="PlatformA" type="StaticBody2D" parent="Platforms"]
+position = Vector2(-180, -54)
+
+[node name="Shape" type="CollisionShape2D" parent="Platforms/PlatformA"]
+position = Vector2(0, 9)
+shape = SubResource("platform_shape")
+one_way_collision = true
+
+[node name="Left" type="TextureRect" parent="Platforms/PlatformA"]
+texture_repeat = 2
+offset_left = -27.0
+offset_right = -9.0
+offset_bottom = 18.0
+texture = ExtResource("10")
+stretch_mode = 1
+
+[node name="Mid" type="TextureRect" parent="Platforms/PlatformA"]
+texture_repeat = 2
+offset_left = -9.0
+offset_right = 9.0
+offset_bottom = 18.0
+texture = ExtResource("11")
+stretch_mode = 1
+
+[node name="Right" type="TextureRect" parent="Platforms/PlatformA"]
+texture_repeat = 2
+offset_left = 9.0
+offset_right = 27.0
+offset_bottom = 18.0
+texture = ExtResource("12")
+stretch_mode = 1
+
+[node name="PlatformB" type="StaticBody2D" parent="Platforms"]
+position = Vector2(-90, -54)
+
+[node name="Shape" type="CollisionShape2D" parent="Platforms/PlatformB"]
+position = Vector2(0, 9)
+shape = SubResource("platform_shape")
+one_way_collision = true
+
+[node name="Left" type="TextureRect" parent="Platforms/PlatformB"]
+texture_repeat = 2
+offset_left = -27.0
+offset_right = -9.0
+offset_bottom = 18.0
+texture = ExtResource("10")
+stretch_mode = 1
+
+[node name="Mid" type="TextureRect" parent="Platforms/PlatformB"]
+texture_repeat = 2
+offset_left = -9.0
+offset_right = 9.0
+offset_bottom = 18.0
+texture = ExtResource("11")
+stretch_mode = 1
+
+[node name="Right" type="TextureRect" parent="Platforms/PlatformB"]
+texture_repeat = 2
+offset_left = 9.0
+offset_right = 27.0
+offset_bottom = 18.0
+texture = ExtResource("12")
+stretch_mode = 1
+
+[node name="PlatformC" type="StaticBody2D" parent="Platforms"]
+position = Vector2(90, -54)
+
+[node name="Shape" type="CollisionShape2D" parent="Platforms/PlatformC"]
+position = Vector2(0, 9)
+shape = SubResource("platform_shape")
+one_way_collision = true
+
+[node name="Left" type="TextureRect" parent="Platforms/PlatformC"]
+texture_repeat = 2
+offset_left = -27.0
+offset_right = -9.0
+offset_bottom = 18.0
+texture = ExtResource("10")
+stretch_mode = 1
+
+[node name="Mid" type="TextureRect" parent="Platforms/PlatformC"]
+texture_repeat = 2
+offset_left = -9.0
+offset_right = 9.0
+offset_bottom = 18.0
+texture = ExtResource("11")
+stretch_mode = 1
+
+[node name="Right" type="TextureRect" parent="Platforms/PlatformC"]
+texture_repeat = 2
+offset_left = 9.0
+offset_right = 27.0
+offset_bottom = 18.0
+texture = ExtResource("12")
+stretch_mode = 1
+
+[node name="PlatformD" type="StaticBody2D" parent="Platforms"]
+position = Vector2(180, -54)
+
+[node name="Shape" type="CollisionShape2D" parent="Platforms/PlatformD"]
+position = Vector2(0, 9)
+shape = SubResource("platform_shape")
+one_way_collision = true
+
+[node name="Left" type="TextureRect" parent="Platforms/PlatformD"]
+texture_repeat = 2
+offset_left = -27.0
+offset_right = -9.0
+offset_bottom = 18.0
+texture = ExtResource("10")
+stretch_mode = 1
+
+[node name="Mid" type="TextureRect" parent="Platforms/PlatformD"]
+texture_repeat = 2
+offset_left = -9.0
+offset_right = 9.0
+offset_bottom = 18.0
+texture = ExtResource("11")
+stretch_mode = 1
+
+[node name="Right" type="TextureRect" parent="Platforms/PlatformD"]
+texture_repeat = 2
+offset_left = 9.0
+offset_right = 27.0
+offset_bottom = 18.0
+texture = ExtResource("12")
+stretch_mode = 1
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(0, -90)
+script = ExtResource("1")
+
+[node name="Shape" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -10)
+shape = SubResource("player_shape")
+
+[node name="Visual" type="Node2D" parent="Player"]
+
+[node name="Sprite" type="Sprite2D" parent="Player/Visual"]
+position = Vector2(0, -11)
+texture = ExtResource("13")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(0, -60)
+zoom = Vector2(9, 9)
+
+[node name="FX" type="Node2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("3")
+player = NodePath("../Player")
+
+[node name="BufferReadout" type="CanvasLayer" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("4")
+player = NodePath("../Player")
+
+[node name="Value" type="Label" parent="BufferReadout"]
+offset_top = 1590.0
+offset_right = 1080.0
+offset_bottom = 1700.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.1, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 64
+text = "jump_buffer = 0.000 s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarBack" type="ColorRect" parent="BufferReadout"]
+offset_left = 140.0
+offset_top = 1720.0
+offset_right = 940.0
+offset_bottom = 1780.0
+color = Color(0.25, 0.1, 0.4, 1)
+
+[node name="Bar" type="ColorRect" parent="BufferReadout"]
+offset_left = 140.0
+offset_top = 1720.0
+offset_right = 140.0
+offset_bottom = 1780.0
+color = Color(0.1, 0.95, 1, 1)
