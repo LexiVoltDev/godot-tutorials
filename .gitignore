@@ -1,0 +1,16 @@
+# Godot 4 cache and imports
+.godot/
+.import/
+*.import
+*.translation
+
+# Exports and builds
+export/
+exports/
+build/
+builds/
+export_presets.cfg
+
+# Misc
+*.tmp
+.DS_Store
