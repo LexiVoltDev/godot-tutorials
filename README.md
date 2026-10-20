@@ -19,6 +19,7 @@ with its own README (what it shows, Godot version, how to run, credits).
 | Mon Oct 19, 2026 | Grid Snap editor plugin (EditorDock) | [grid-snap/](grid-snap/) | [Watch](https://youtu.be/hYf4oCjITXU) | 4.6+ |
 | Mon Oct 19, 2026 | Time Rewind (Braid-style) | [time-rewind/](time-rewind/) | [Watch](https://youtu.be/OX466Os7FH4) | 4.1+ |
 | Tue Oct 20, 2026 | Navigation and avoidance (NavigationAgent2D) | [navigation-avoidance/](navigation-avoidance/) | Coming soon | 4.3+ |
+| Tue Oct 20, 2026 | Trail3D: sword, dash and projectile trails | [trail3d/](trail3d/) | Coming soon | 4.8 beta 1+ |
 | Wed Oct 21, 2026 | Hit-Stop | [hit-stop/](hit-stop/) | Coming soon | 4.4+ |
 
 More are on the way.
