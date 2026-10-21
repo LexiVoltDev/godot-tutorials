@@ -1,0 +1,11 @@
+config_version=5
+
+[application]
+
+config/name="Dissolve Shader"
+run/main_scene="res://main.tscn"
+
+[display]
+
+window/size/viewport_width=1152
+window/size/viewport_height=648

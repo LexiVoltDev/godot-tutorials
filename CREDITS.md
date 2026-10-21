@@ -15,6 +15,7 @@ its source and license.
 | [time-rewind](time-rewind/) | None. Everything on screen is built from plain Godot nodes, gradients and a small shader. | - | - |
 | [navigation-avoidance](navigation-avoidance/) | None. Plain Godot nodes. | - | - |
 | [hit-stop](hit-stop/) | None. Everything on screen is built from plain Godot nodes. | - | - |
+| [dissolve-shader](dissolve-shader/) | None. Cards and noise are generated in-engine (GradientTexture2D, NoiseTexture2D + FastNoiseLite). | - | - |
 
 No music or sound files are included in any project.
 
