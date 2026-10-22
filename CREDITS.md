@@ -16,6 +16,7 @@ its source and license.
 | [navigation-avoidance](navigation-avoidance/) | None. Plain Godot nodes. | - | - |
 | [hit-stop](hit-stop/) | None. Everything on screen is built from plain Godot nodes. | - | - |
 | [dissolve-shader](dissolve-shader/) | None. Cards and noise are generated in-engine (GradientTexture2D, NoiseTexture2D + FastNoiseLite). | - | - |
+| [multiplayer-sync](multiplayer-sync/) | None. Plain Godot nodes (ColorRects and default-theme buttons). | - | - |
 
 No music or sound files are included in any project.
 

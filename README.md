@@ -22,6 +22,7 @@ with its own README (what it shows, Godot version, how to run, credits).
 | Tue Oct 20, 2026 | Trail3D: sword, dash and projectile trails | [trail3d/](trail3d/) | Coming soon | 4.8 beta 1+ |
 | Wed Oct 21, 2026 | Hit-Stop | [hit-stop/](hit-stop/) | Coming soon | 4.4+ |
 | Thu Oct 22, 2026 | 2D dissolve shader (burn sprites away with noise) | [dissolve-shader/](dissolve-shader/) | Coming soon | 4.3+ |
+| Fri Oct 23, 2026 | Multiplayer sync: MultiplayerSpawner + MultiplayerSynchronizer | [multiplayer-sync/](multiplayer-sync/) | Coming soon | 4.8 beta 1+ |
 
 More are on the way.
 
