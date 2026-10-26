@@ -23,6 +23,7 @@ with its own README (what it shows, Godot version, how to run, credits).
 | Wed Oct 21, 2026 | Hit-Stop | [hit-stop/](hit-stop/) | Coming soon | 4.4+ |
 | Thu Oct 22, 2026 | 2D dissolve shader (burn sprites away with noise) | [dissolve-shader/](dissolve-shader/) | Coming soon | 4.3+ |
 | Fri Oct 23, 2026 | Multiplayer sync: MultiplayerSpawner + MultiplayerSynchronizer | [multiplayer-sync/](multiplayer-sync/) | Coming soon | 4.8 beta 1+ |
+| Tue Oct 27, 2026 | Async loading screen (threaded loading, no freeze) | [async-loading/](async-loading/) | Coming soon | 4.x |
 
 More are on the way.
 
