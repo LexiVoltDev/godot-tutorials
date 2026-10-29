@@ -18,6 +18,7 @@ its source and license.
 | [dissolve-shader](dissolve-shader/) | None. Cards and noise are generated in-engine (GradientTexture2D, NoiseTexture2D + FastNoiseLite). | - | - |
 | [multiplayer-sync](multiplayer-sync/) | None. Plain Godot nodes (ColorRects and default-theme buttons). | - | - |
 | [async-loading](async-loading/) | None. Stars and UI are generated in-engine (Polygon2D, ColorRects, default theme). | - | - |
+| [live-editing](live-editing/) | None. Plain Godot nodes (Polygon2D, ColorRect, Label). | - | - |
 
 No music or sound files are included in any project.
 
